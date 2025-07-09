@@ -8,9 +8,9 @@ function createbox(container) {
     box.style.opacity = '0';
    
     // Add mouseover and mouseout events for opacity effect
-    box.addEventListener('mouseover', () => {
-        box.style.opacity = '1';
-    });
+    //box.addEventListener('mouseover', () => {
+        //box.style.opacity = '1';
+    //});
     box.addEventListener('mouseover', () => {
         let currentOpacity = parseFloat(box.style.opacity);
         if (currentOpacity < 1) {
