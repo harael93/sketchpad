@@ -6,13 +6,16 @@ function createbox(container) {
     box.style.height = '50px';
     box.style.backgroundColor = 'black';
     box.style.opacity = '0';
-    box.style.margin = '5px';
+   
     // Add mouseover and mouseout events for opacity effect
     box.addEventListener('mouseover', () => {
         box.style.opacity = '1';
     });
-    box.addEventListener('mouseout', () => {
-        box.style.opacity = '0';
+    box.addEventListener('mouseover', () => {
+        let currentOpacity = parseFloat(box.style.opacity);
+        if (currentOpacity < 1) {
+            box.style.opacity = (currentOpacity + 0.1).toString();
+        }
     });
     // Append to the container
     container.appendChild(box);
@@ -28,5 +31,4 @@ function submit() {
         createbox(container);
     }
 }
-
 
